@@ -33,7 +33,7 @@ bun install
 - `getAd(adId)` récupère une annonce complète.
 - `getUser(userId)` récupère un vendeur ; `await ad.user` le charge paresseusement.
 
-`Client` accepte `proxy`, `browser` (`"chrome"` ou `"firefox"`), `requestVerify`, `timeout` en secondes et `maxRetries`. La dépendance `impit` assure l’empreinte TLS/HTTP navigateur et la persistance des cookies.
+`Client` accepte `proxy`, `impersonate` (par défaut `"safari170"`), `requestVerify`, `timeout` en secondes et `maxRetries`. La dépendance `curl-cffi-node` assure l’empreinte TLS/HTTP de `curl-impersonate` et la persistance des cookies.
 
 ## Erreurs 403
 
