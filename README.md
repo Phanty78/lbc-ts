@@ -1,9 +1,9 @@
-# lbc
+# lbc-ts
 
 Client TypeScript/Bun non officiel pour l’API Leboncoin, issu du portage de [etienne-hd/lbc](https://github.com/etienne-hd/lbc).
 
 ```ts
-import { AdType, Category, City, Client, Sort } from "lbc";
+import { AdType, Category, City, Client, Sort } from "@phanty78/lbc-ts";
 
 const client = new Client();
 const result = await client.search({
@@ -22,7 +22,7 @@ for (const ad of result.ads) console.log(ad.url, ad.subject, ad.price);
 ## Installation
 
 ```sh
-bun install
+bun add @phanty78/lbc-ts
 ```
 
 ## API
