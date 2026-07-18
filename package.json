@@ -1,5 +1,5 @@
 {
-  "name": "@phanty78/lbc-ts",
+  "name": "@maeldonnart/lbc-ts",
   "version": "0.1.0",
   "description": "Unofficial TypeScript/Bun client for Leboncoin.",
   "type": "module",
