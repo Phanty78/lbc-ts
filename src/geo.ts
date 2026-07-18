@@ -7,6 +7,7 @@ export class City {
   ) {}
 }
 
+// biome-ignore lint/suspicious/noShadowRestrictedNames: Nom conservé pour compatibilité avec l’API publique.
 export class Proxy {
   constructor(
     public readonly host: string,
@@ -17,7 +18,10 @@ export class Proxy {
   ) {}
 
   get url(): string {
-    const credentials = this.username && this.password ? `${encodeURIComponent(this.username)}:${encodeURIComponent(this.password)}@` : "";
+    const credentials =
+      this.username && this.password
+        ? `${encodeURIComponent(this.username)}:${encodeURIComponent(this.password)}@`
+        : "";
     return `${this.scheme}://${credentials}${this.host}:${this.port}`;
   }
 }
