@@ -1,0 +1,42 @@
+# lbc
+
+Client TypeScript/Bun non officiel pour l’API Leboncoin, issu du portage de [etienne-hd/lbc](https://github.com/etienne-hd/lbc).
+
+```ts
+import { AdType, Category, City, Client, Sort } from "lbc";
+
+const client = new Client();
+const result = await client.search({
+  text: "maison",
+  locations: new City(48.8599, 2.3380, 10_000, "Paris"),
+  sort: Sort.NEWEST,
+  adType: AdType.OFFER,
+  category: Category.IMMOBILIER,
+  square: [200, 400],
+  price: [300_000, 700_000],
+});
+
+for (const ad of result.ads) console.log(ad.url, ad.subject, ad.price);
+```
+
+## Installation
+
+```sh
+bun install
+```
+
+## API
+
+`Client` expose trois méthodes asynchrones :
+
+- `search(options)` accepte les options typées et les filtres API (`price`, `square`, `real_estate_type`, etc.), ou une URL de recherche via `url`.
+- `getAd(adId)` récupère une annonce complète.
+- `getUser(userId)` récupère un vendeur ; `await ad.user` le charge paresseusement.
+
+`Client` accepte `proxy`, `browser` (`"chrome"` ou `"firefox"`), `requestVerify`, `timeout` en secondes et `maxRetries`. La dépendance `impit` assure l’empreinte TLS/HTTP navigateur et la persistance des cookies.
+
+## Erreurs 403
+
+`DatadomeError` signale un blocage côté Leboncoin. Réduis la fréquence des requêtes et utilise, si nécessaire, un proxy fiable ; l’empreinte navigateur ne garantit pas l’accès à elle seule.
+
+Ce projet n’est pas affilié à Leboncoin. Utilise-le de manière responsable et conforme à leurs conditions d’utilisation.
