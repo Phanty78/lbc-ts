@@ -40,3 +40,9 @@ bun add @maeldonnart/lbc-ts
 `DatadomeError` signale un blocage côté Leboncoin. Réduis la fréquence des requêtes et utilise, si nécessaire, un proxy fiable ; l’empreinte navigateur ne garantit pas l’accès à elle seule.
 
 Ce projet n’est pas affilié à Leboncoin. Utilise-le de manière responsable et conforme à leurs conditions d’utilisation.
+
+## ☕ Soutenir le projet
+
+Si ce projet vous est utile, vous pouvez soutenir son développement :
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Offrez--moi%20un%20café-devphanty-yellow?logo=buymeacoffee)](https://buymeacoffee.com/devphanty)
