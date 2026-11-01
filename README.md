@@ -1,5 +1,9 @@
 # lbc-ts
 
+[![npm](https://img.shields.io/npm/v/@maeldonnart/lbc-ts.svg)](https://www.npmjs.com/package/@maeldonnart/lbc-ts)
+[![CI](https://github.com/Phanty78/lbc-ts/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Phanty78/lbc-ts/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Client TypeScript/Bun non officiel pour l’API Leboncoin, issu du portage de [etienne-hd/lbc](https://github.com/etienne-hd/lbc).
 
 ```ts
@@ -38,6 +42,9 @@ bun add @maeldonnart/lbc-ts
 ## Erreurs 403
 
 `DatadomeError` signale un blocage côté Leboncoin. Réduis la fréquence des requêtes et utilise, si nécessaire, un proxy fiable ; l’empreinte navigateur ne garantit pas l’accès à elle seule.
+
+> La CI s’exécute sur macOS : le binaire natif de `curl-cffi-node` ne se charge
+> pas sur les runners Linux (symbole `libidn2` non résolu).
 
 Ce projet n’est pas affilié à Leboncoin. Utilise-le de manière responsable et conforme à leurs conditions d’utilisation.
 
