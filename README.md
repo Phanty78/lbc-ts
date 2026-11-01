@@ -1,5 +1,9 @@
 # lbc-ts
 
+[![npm](https://img.shields.io/npm/v/@maeldonnart/lbc-ts.svg)](https://www.npmjs.com/package/@maeldonnart/lbc-ts)
+[![CI](https://github.com/Phanty78/lbc-ts/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Phanty78/lbc-ts/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Client TypeScript/Bun non officiel pour l’API Leboncoin, issu du portage de [etienne-hd/lbc](https://github.com/etienne-hd/lbc).
 
 ```ts
