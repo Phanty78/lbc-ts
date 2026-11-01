@@ -43,6 +43,9 @@ bun add @maeldonnart/lbc-ts
 
 `DatadomeError` signale un blocage côté Leboncoin. Réduis la fréquence des requêtes et utilise, si nécessaire, un proxy fiable ; l’empreinte navigateur ne garantit pas l’accès à elle seule.
 
+> La CI s’exécute sur macOS : le binaire natif de `curl-cffi-node` ne se charge
+> pas sur les runners Linux (symbole `libidn2` non résolu).
+
 Ce projet n’est pas affilié à Leboncoin. Utilise-le de manière responsable et conforme à leurs conditions d’utilisation.
 
 ## ☕ Soutenir le projet

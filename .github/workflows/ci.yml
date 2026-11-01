@@ -8,7 +8,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # The curl-cffi-node native binding fails to load on Linux runners
+    # (unresolved libidn2 symbol), so the test job runs on macOS.
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
 
